@@ -9,7 +9,8 @@
 
 <body>
 	<div class="container">
-		<form method="post" class="form">
+		<form method="post" action="#" onSubmit="return validate(this);" name="form" class="form">
+
 			<div class="form__field-cont">
 				<label class="form__field-label" for="email">Your e-mail
 				</label>
@@ -17,7 +18,7 @@
 			</div>
 
 			<div class="form__field-cont">
-				<label class="form__title" for="date">Date
+				<label class="form__field-label" for="date">Date
 				</label>
 				<input class="form__field" type="date" name="date" id="date" value="2016-08-08" required>
 			</div>
@@ -29,16 +30,21 @@
 			</div>
 
 			<div class="form__field-cont">
-				<label class="form__field-label" for="name">Your surname
+				<label class="form__field-label" for="surname">Your surname
 				</label>
 				<input class="form__field" type="text" name="surname" id="surname" value="Enter your surname here" required>
 			</div>
 
-			<input class="form__submit" type="submit" value="Submit">
+			<input type="submit" value="Submit" id="submit" name="submit" class="form__submit">
+
 
 		</form>
-	</div>
 
+		<div class="form__errors">
+		</div>
+	</div>
+	<script src="js/script.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js" type="text/javascript"></script>
 </body>
 
 </html>
